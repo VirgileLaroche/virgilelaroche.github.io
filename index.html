@@ -4,15 +4,24 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Virgile Laroche</title>
+<!-- Import Google Fonts similar to Carrd -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
 <style>
-  /* Background and body */
+  /* Body and background */
   body {
     margin: 0;
-    font-family: 'Arial', sans-serif;
-    background: linear-gradient(180deg, #1a1a1a, #111);
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(180deg, #111, #1a1a1a);
     color: #fff;
     text-align: center;
-    padding: 60px 20px;
+    padding: 80px 20px;
+    overflow-x: hidden;
+  }
+
+  /* Fade-in animation */
+  @keyframes fadeInUp {
+    0% {opacity: 0; transform: translateY(30px);}
+    100% {opacity: 1; transform: translateY(0);}
   }
 
   /* Profile picture */
@@ -23,12 +32,16 @@
     object-fit: cover;
     margin-bottom: 30px;
     border: 4px solid #fff;
+    animation: fadeInUp 1s ease forwards;
   }
 
   /* Name */
   h1 {
     font-size: 2.8rem;
     margin: 0;
+    animation: fadeInUp 1s ease forwards;
+    animation-delay: 0.3s;
+    opacity: 0;
   }
 
   /* Subtitle */
@@ -36,6 +49,9 @@
     font-size: 1.3rem;
     color: #ccc;
     margin: 10px 0 40px;
+    animation: fadeInUp 1s ease forwards;
+    animation-delay: 0.5s;
+    opacity: 0;
   }
 
   /* Buttons */
@@ -49,8 +65,17 @@
     text-decoration: none;
     font-size: 1rem;
     border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
     transition: background 0.3s, transform 0.2s;
+    animation: fadeInUp 1s ease forwards;
+    opacity: 0;
   }
+  .buttons a:nth-child(1){ animation-delay: 0.7s; }
+  .buttons a:nth-child(2){ animation-delay: 0.9s; }
+  .buttons a:nth-child(3){ animation-delay: 1.1s; }
+  .buttons a:nth-child(4){ animation-delay: 1.3s; }
+  .buttons a:nth-child(5){ animation-delay: 1.5s; }
+
   .buttons a:hover {
     background: #333;
     transform: translateY(-2px);
@@ -60,6 +85,8 @@
   @media (max-width: 500px) {
     img.profile { width: 140px; height: 140px; }
     .buttons a { width: 200px; }
+    h1 { font-size: 2rem; }
+    p.subtitle { font-size: 1rem; margin-bottom: 30px; }
   }
 </style>
 </head>
