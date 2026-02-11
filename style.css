@@ -1,5 +1,6 @@
 /* Body and background */
-  body {
+html{height: 100%;} 
+body {
     margin: 0;
     font-family: 'Inter', sans-serif;
     background: linear-gradient(180deg, #111, #1a1a1a);
